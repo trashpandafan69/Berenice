@@ -1,6 +1,6 @@
 {{ $parts := split .RelPermalink "/" }}
 <nav class="text-sm text-gray-500 mb-4 space-x-1">
-  <a href="/" class="hover:underline">Home</a>
+  <a href="{{ .Site.BaseURL }}" class="hover:underline">Home</a>
   {{ $path := "" }}
   {{ range $i, $p := $parts }}
     {{ if and (ne $p "") (lt $i (sub (len $parts) 1)) }}
